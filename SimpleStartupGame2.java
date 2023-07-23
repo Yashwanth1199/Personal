@@ -3,6 +3,9 @@ import java.util.ArrayList;
 class SimpleStartup{
     private ArrayList<String> locationCells= new ArrayList<String>();
     private int numOfGuesses;
+    public int getRandomNumber(int min,int max){
+        return (int) (Math.random()*(max-min)+min);
+    }
     public void setLocationCells(ArrayList<String>n){
         locationCells = n;
     }
@@ -31,11 +34,14 @@ class SimpleStartupGame2{
         Scanner s= new Scanner(System.in);
         SimpleStartup one= new SimpleStartup();
         ArrayList<String> locations= new ArrayList<String>();
-        locations.add("A3");
-        locations.add("A4");
-        locations.add("A5");
+        String s1= "A"+one.getRandomNumber(1,10);
+        String s2= "A"+one.getRandomNumber(1,10);
+        String s3= "A"+one.getRandomNumber(1,10);
+        locations.add(s1);
+        locations.add(s2);
+        locations.add(s3);
         one.setLocationCells(locations);
-        System.out.println("Rules \n-In a row of 10 cells labelled from A1 to A10 guess the 3 cells and make a kill to get your rating based on the number of guesses.\n Good Luck :)\n");
+        System.out.println("Setup and Goal \n-In a row of 10 cells labelled from A1 to A10 guess the correct cell to make a hit and 3 consequent hits lead to a kill and the game is completed thus ending it with a rating based on the number of guesses.\n Good Luck :)\n");
         while(!locations.isEmpty()){
             System.out.print("\nEnter your guess: ");
             String yourguess=s.next();
