@@ -34,9 +34,9 @@ class SimpleStartupGame2{
         Scanner s= new Scanner(System.in);
         SimpleStartup one= new SimpleStartup();
         ArrayList<String> locations= new ArrayList<String>();
-        String s1= "A"+one.getRandomNumber(1,10);
-        String s2= "A"+one.getRandomNumber(1,10);
-        String s3= "A"+one.getRandomNumber(1,10);
+        String s1= "A"+one.getRandomNumber(1,3);
+        String s2= "A"+one.getRandomNumber(4,7);
+        String s3= "A"+one.getRandomNumber(8,10);
         locations.add(s1);
         locations.add(s2);
         locations.add(s3);
